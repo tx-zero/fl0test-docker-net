@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY ./ ./
 
-RUN dotnet publish "./test-dotnet.csproj" -a arm64 -c Release -o ./out/
+RUN dotnet publish "./test-dotnet.csproj" -c Release -o ./out/
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 EXPOSE 80
